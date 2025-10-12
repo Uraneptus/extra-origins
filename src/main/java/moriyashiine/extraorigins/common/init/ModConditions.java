@@ -10,8 +10,6 @@ import io.github.apace100.apoli.registry.ApoliRegistries;
 import io.github.apace100.calio.data.SerializableData;
 import io.github.apace100.calio.data.SerializableDataType;
 import moriyashiine.extraorigins.common.ExtraOrigins;
-import moriyashiine.extraorigins.common.power.RadialMenuPower;
-import moriyashiine.extraorigins.common.util.RadialMenuDirection;
 import net.minecraft.block.Fertilizable;
 import net.minecraft.block.pattern.CachedBlockPosition;
 import net.minecraft.entity.Entity;

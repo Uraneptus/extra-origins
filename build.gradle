@@ -1,5 +1,5 @@
 plugins {
-    id 'fabric-loom' version '1.6-SNAPSHOT'
+    id 'fabric-loom' version '1.11-SNAPSHOT'
     id 'io.github.ladysnake.chenille' version '0.13.1'
 }
 
@@ -13,7 +13,7 @@ base {
 chenille {
     customLicense = rootProject.file("LICENSE")
     github = new URL("https://github.com/MoriyaShiine/extra-origins")
-    javaVersion = 17
+    javaVersion = 21
     configurePublishing {
         withLadysnakeMaven()
         withGithubRelease()
@@ -37,6 +37,9 @@ repositories {
         name "carpet"
         url "https://masa.dy.fi/maven"
     }
+    maven {
+        url = 'https://maven.ladysnake.org/snapshots' 
+    }
 }
 
 dependencies {
@@ -45,7 +48,7 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${loader_version}"
 
     modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
-    modImplementation "com.github.apace100:origins-fabric:${origins_version}"
+    modImplementation "io.github.apace100:origins-fabric:${origins_version}"
     modImplementation("com.github.virtuoel:pehkui:${pehkui_version}") {
         exclude group: "net.fabricmc.fabric-api"
     }
@@ -60,14 +63,14 @@ processResources {
 }
 
 tasks.withType(JavaCompile).configureEach {
-    it.options.release = 17
+    it.options.release = 21
 }
 
 java {
     withSourcesJar()
 
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
 }
 
 jar {

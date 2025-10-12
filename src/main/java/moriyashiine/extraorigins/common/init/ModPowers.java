@@ -12,9 +12,7 @@ import io.github.apace100.calio.data.SerializableData;
 import io.github.apace100.calio.data.SerializableDataType;
 import io.github.apace100.calio.data.SerializableDataTypes;
 import moriyashiine.extraorigins.common.ExtraOrigins;
-import moriyashiine.extraorigins.common.component.entity.RandomPowerGranterComponent;
 import moriyashiine.extraorigins.common.power.*;
-import moriyashiine.extraorigins.common.util.RadialMenuDirection;
 import net.minecraft.registry.Registry;
 
 import java.util.Collections;
@@ -29,21 +27,6 @@ public class ModPowers {
 	public static final PowerFactory<?> MODIFY_ITEM_ATTRIBUTE = ModifyItemAttributePower.createFactory(ExtraOrigins.id("modify_item_attribute"));
 	public static final PowerFactory<?> MODIFY_SIZE = new PowerFactory<>(ExtraOrigins.id("modify_size"), new SerializableData().add("scale_types", SerializableDataTypes.IDENTIFIERS).add("scale", SerializableDataTypes.FLOAT), data -> (type, entity) -> new ModifySizePower(type, entity, data.get("scale_types"), data.getFloat("scale"))).allowCondition();
 	public static final PowerFactory<?> PREVENT_BLOCK_SLOWNESS = new PowerFactory<>(ExtraOrigins.id("prevent_block_slowness"), new SerializableData(), data -> (type, entity) -> new PreventBlockSlownessPower(type, entity)).allowCondition();
-	public static final PowerFactory<?> RADIAL_MENU = new PowerFactory<>(ExtraOrigins.id("radial_menu"), new SerializableData()
-			.add("key", ApoliDataTypes.KEY, new Active.Key())
-			.add("sprite_location", SerializableDataTypes.IDENTIFIER)
-			.add("up_action", ApoliDataTypes.ENTITY_ACTION, null)
-			.add("down_action", ApoliDataTypes.ENTITY_ACTION, null)
-			.add("left_action", ApoliDataTypes.ENTITY_ACTION, null)
-			.add("right_action", ApoliDataTypes.ENTITY_ACTION, null)
-			.add("lost_action", ApoliDataTypes.ENTITY_ACTION, null)
-			.add("swap_time", SerializableDataTypes.INT, 20)
-			.add("default_direction", SerializableDataType.enumValue(RadialMenuDirection.class), RadialMenuDirection.UP), data -> (type, entity) -> {
-		RadialMenuPower power = new RadialMenuPower(type, entity, data.getId("sprite_location"), data.get("up_action"), data.get("down_action"), data.get("left_action"), data.get("right_action"), data.get("lost_action"), data.getInt("swap_time"), data.get("default_direction"));
-		power.setKey(data.get("key"));
-		return power;
-	}).allowCondition();
-	public static final PowerFactory<?> RANDOM_POWER_GRANTER = new PowerFactory<>(RandomPowerGranterComponent.RANDOM_POWER_GRANTER, new SerializableData(), data -> (type, entity) -> new RandomPowerGranterPower(type, entity));
 	public static final PowerFactory<?> START_RIDING = new PowerFactory<>(ExtraOrigins.id("start_riding"), new SerializableData().add("key", ApoliDataTypes.KEY, new Active.Key()), data -> (type, entity) -> {
 		MountPower power = new MountPower(type, entity);
 		power.setKey(data.get("key"));

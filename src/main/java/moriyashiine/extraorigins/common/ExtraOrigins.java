@@ -4,9 +4,7 @@
 package moriyashiine.extraorigins.common;
 
 import moriyashiine.extraorigins.common.event.DismountEvent;
-import moriyashiine.extraorigins.common.event.RandomPowerGranterEvent;
 import moriyashiine.extraorigins.common.init.*;
-import moriyashiine.extraorigins.common.packet.ChangeRadialDirectionPacket;
 import moriyashiine.extraorigins.common.packet.MountC2SPacket;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
@@ -19,7 +17,6 @@ public class ExtraOrigins implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		ModParticleTypes.init();
 		ModSoundEvents.init();
 		ModPowers.init();
 		ModConditions.init();
@@ -30,16 +27,14 @@ public class ExtraOrigins implements ModInitializer {
 	}
 
 	public static Identifier id(String value) {
-		return new Identifier(MOD_ID, value);
+		return Identifier.of(MOD_ID, value);
 	}
 
 	private void initPackets() {
-		ServerPlayNetworking.registerGlobalReceiver(ChangeRadialDirectionPacket.ID, new ChangeRadialDirectionPacket.Receiver());
 		ServerPlayNetworking.registerGlobalReceiver(MountC2SPacket.ID, new MountC2SPacket.Receiver());
 	}
 
 	private void initEvents() {
 		ServerPlayConnectionEvents.DISCONNECT.register(new DismountEvent());
-		ServerPlayerEvents.AFTER_RESPAWN.register(new RandomPowerGranterEvent());
 	}
 }

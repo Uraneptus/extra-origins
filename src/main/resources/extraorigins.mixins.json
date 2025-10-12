@@ -1,11 +1,9 @@
 {
   "required": true,
   "package": "moriyashiine.extraorigins.mixin",
-  "compatibilityLevel": "JAVA_17",
+  "compatibilityLevel": "JAVA_21",
   "mixins": [
 	"canstandonpowdersnow.PowderSnowBlockMixin",
-	"foodeffectimmunity.LivingEntityMixin",
-	"foodeffectimmunity.SuspiciousStewItemMixin",
 	"innateunbreaking.ItemStackMixin",
 	"mobneutrality.ActiveTargetGoalMixin",
 	"mobneutrality.EndermanEntityMixin",
@@ -15,15 +13,12 @@
 	"mobneutrality.PiglinBruteBrainMixin",
 	"mobneutrality.PiglinSpecificSensorMixin",
 	"mobneutrality.ZoglinEntityMixin",
-	"modifyairstrafingspeed.LivingEntityMixin",
-	"preventblockslowness.EntityMixin",
-	"util.impact4.ImpactMixin"
+	"preventblockslowness.EntityMixin"
   ],
   "client": [
 	"delayedhitbox.client.MinecraftClientMixin",
 	"modifyitemattribute.client.ItemStackMixin",
-	"mount.client.ProjectileUtilMixin",
-	"randompowergranter.client.OriginDisplayScreenMixin"
+	"mount.client.ProjectileUtilMixin"
   ],
   "injectors": {
 	"defaultRequire": 1
