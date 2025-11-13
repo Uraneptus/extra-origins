@@ -16,7 +16,7 @@
 			}
 		  },
 		  {
-			"type": "origins:meat"
+			"type": "origins:food"
 		  }
 		],
 		"inverted": true

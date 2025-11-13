@@ -3,13 +3,8 @@
  */
 package moriyashiine.extraorigins.common;
 
-import moriyashiine.extraorigins.common.event.DismountEvent;
 import moriyashiine.extraorigins.common.init.*;
-import moriyashiine.extraorigins.common.packet.MountC2SPacket;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
-import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
-import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.util.Identifier;
 
 public class ExtraOrigins implements ModInitializer {
@@ -20,21 +15,10 @@ public class ExtraOrigins implements ModInitializer {
 		ModSoundEvents.init();
 		ModPowers.init();
 		ModConditions.init();
-		ModActions.init();
 		ModScaleTypes.init();
-		initPackets();
-		initEvents();
 	}
 
 	public static Identifier id(String value) {
 		return Identifier.of(MOD_ID, value);
-	}
-
-	private void initPackets() {
-		ServerPlayNetworking.registerGlobalReceiver(MountC2SPacket.ID, new MountC2SPacket.Receiver());
-	}
-
-	private void initEvents() {
-		ServerPlayConnectionEvents.DISCONNECT.register(new DismountEvent());
 	}
 }

@@ -19,7 +19,7 @@ public class FleeEntityGoalMixin {
 	@ModifyVariable(method = "<init>(Lnet/minecraft/entity/mob/PathAwareEntity;Ljava/lang/Class;Ljava/util/function/Predicate;FDDLjava/util/function/Predicate;)V", at = @At("HEAD"), ordinal = 1, argsOnly = true)
 	private static Predicate<LivingEntity> extraorigins$mobNeutrality(Predicate<LivingEntity> value, PathAwareEntity mob) {
 		Predicate<LivingEntity> neutralityPredicate = target -> {
-			for (MobNeutralityPower power : PowerHolderComponent.getPowers(target, MobNeutralityPower.class)) {
+			for (MobNeutralityPower power : PowerHolderComponent.getPowerTypes(target, MobNeutralityPower.class)) {
 				if (power.shouldBeNeutral(mob) && power.isActive()) {
 					return false;
 				}

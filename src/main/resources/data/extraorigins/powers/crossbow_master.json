@@ -5,7 +5,7 @@
   },
   "modifier": {
 	"name": "Origin modifier",
-	"operation": "multiply_base",
-	"value": 0.75
+	"operation": "apoli:multiply_base_multiplicative",
+	"amount": 0.75
   }
 }

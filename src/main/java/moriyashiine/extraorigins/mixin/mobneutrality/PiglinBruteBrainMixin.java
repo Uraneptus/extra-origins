@@ -19,7 +19,7 @@ public class PiglinBruteBrainMixin {
 	private static boolean extraorigins$mobNeutrality(LivingEntity instance, Entity entity, double radius, Operation<Boolean> original) {
 		boolean inRange = original.call(instance, entity, radius);
 		if (inRange) {
-			for (MobNeutralityPower power : PowerHolderComponent.getPowers(instance, MobNeutralityPower.class)) {
+			for (MobNeutralityPower power : PowerHolderComponent.getPowerTypes(instance, MobNeutralityPower.class)) {
 				if (power.shouldBeNeutral(entity) && power.isActive()) {
 					return false;
 				}

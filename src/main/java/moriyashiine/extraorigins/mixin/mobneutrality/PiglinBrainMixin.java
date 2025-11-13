@@ -23,7 +23,7 @@ public class PiglinBrainMixin {
 	private static List<?> extraorigins$mobNeutrality(World instance, Class<? extends Entity> aClass, Box box, Operation<List<? extends Entity>> original, PlayerEntity player) {
 		List<? extends Entity> list = original.call(instance, aClass, box);
 		for (int i = list.size() - 1; i >= 0; i--) {
-			for (MobNeutralityPower power : PowerHolderComponent.getPowers(player, MobNeutralityPower.class)) {
+			for (MobNeutralityPower power : PowerHolderComponent.getPowerTypes(player, MobNeutralityPower.class)) {
 				if (power.shouldBeNeutral(list.get(i)) && power.isActive()) {
 					list.remove(i);
 					break;

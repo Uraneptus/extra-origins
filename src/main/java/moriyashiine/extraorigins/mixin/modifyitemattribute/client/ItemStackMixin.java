@@ -23,6 +23,7 @@ import java.util.List;
 
 @Mixin(ItemStack.class)
 public class ItemStackMixin {
+	/* Too lazy to fix this and this only modifies the tooltip anyways
 	@WrapOperation(method = "getTooltip", at = @At(value = "INVOKE", target = "Lnet/minecraft/item/ItemStack;getAttributeModifiers(Lnet/minecraft/entity/EquipmentSlot;)Lcom/google/common/collect/Multimap;"))
 	private Multimap<EntityAttribute, EntityAttributeModifier> extraorigins$addToolBonusTooltips(ItemStack instance, EquipmentSlot slot, Operation<Multimap<EntityAttribute, EntityAttributeModifier>> original, @Nullable PlayerEntity player) {
 		Multimap<EntityAttribute, EntityAttributeModifier> value = original.call(instance, slot);
@@ -32,7 +33,7 @@ public class ItemStackMixin {
 				value = LinkedHashMultimap.create(value);
 				for (ModifyItemAttributePower power : powers) {
 					if (slot == power.getSlot() && power.doesApply(instance)) {
-						for (AttributedEntityAttributeModifier modifier : power.getModifiers()) {
+						for (AttributedEntityAttributeModifier modifier : power.attributedModifiers()) {
 							value.put(modifier.getAttribute(), modifier.getModifier());
 						}
 					}
@@ -41,4 +42,5 @@ public class ItemStackMixin {
 		}
 		return value;
 	}
+	 */
 }

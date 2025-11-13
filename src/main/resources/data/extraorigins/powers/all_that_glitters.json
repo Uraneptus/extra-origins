@@ -10,10 +10,10 @@
 	  }
 	},
 	"modifier": {
-	  "name": "Origin modifier",
+	  "id": "*:*",
 	  "attribute": "minecraft:generic.armor",
-	  "operation": "addition",
-	  "value": 1
+	  "operation": "add_value",
+	  "amount": 1
 	}
   },
   "golden_chest_boost": {
@@ -26,10 +26,10 @@
 	  }
 	},
 	"modifier": {
-	  "name": "Origin modifier",
+	  "id": "*:*",
 	  "attribute": "minecraft:generic.armor",
-	  "operation": "addition",
-	  "value": 2
+	  "operation": "add_value",
+	  "amount": 2
 	}
   },
   "golden_legs_boost": {
@@ -42,10 +42,10 @@
 	  }
 	},
 	"modifier": {
-	  "name": "Origin modifier",
+	  "id": "*:*",
 	  "attribute": "minecraft:generic.armor",
-	  "operation": "addition",
-	  "value": 2
+	  "operation": "add_value",
+	  "amount": 2
 	}
   },
   "golden_feet_boost": {
@@ -58,10 +58,10 @@
 	  }
 	},
 	"modifier": {
-	  "name": "Origin modifier",
+	  "id": "*:*",
 	  "attribute": "minecraft:generic.armor",
-	  "operation": "addition",
-	  "value": 1
+	  "operation": "add_value",
+	  "amount": 1
 	}
   },
   "golden_mainhand_boost": {
@@ -74,10 +74,10 @@
 	  }
 	},
 	"modifier": {
-	  "name": "Origin modifier",
+	  "id": "*:*",
 	  "attribute": "minecraft:generic.attack_damage",
-	  "operation": "addition",
-	  "value": 2.5
+	  "operation": "add_value",
+	  "amount": 2.5
 	}
   },
   "golden_armor_durability_multiplier": {

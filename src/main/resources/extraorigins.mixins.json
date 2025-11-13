@@ -3,7 +3,6 @@
   "package": "moriyashiine.extraorigins.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-	"canstandonpowdersnow.PowderSnowBlockMixin",
 	"innateunbreaking.ItemStackMixin",
 	"mobneutrality.ActiveTargetGoalMixin",
 	"mobneutrality.EndermanEntityMixin",
@@ -12,13 +11,9 @@
 	"mobneutrality.PiglinBrainMixin",
 	"mobneutrality.PiglinBruteBrainMixin",
 	"mobneutrality.PiglinSpecificSensorMixin",
-	"mobneutrality.ZoglinEntityMixin",
-	"preventblockslowness.EntityMixin"
+	"mobneutrality.ZoglinEntityMixin"
   ],
   "client": [
-	"delayedhitbox.client.MinecraftClientMixin",
-	"modifyitemattribute.client.ItemStackMixin",
-	"mount.client.ProjectileUtilMixin"
   ],
   "injectors": {
 	"defaultRequire": 1

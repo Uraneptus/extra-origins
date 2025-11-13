@@ -19,7 +19,7 @@ public class PiglinSpecificSensorMixin {
 	private boolean extraorigins$mobNeutrality(LivingEntity player, Operation<Boolean> original, ServerWorld world, LivingEntity entity) {
 		boolean wearsGold = original.call(player);
 		if (!wearsGold) {
-			for (MobNeutralityPower power : PowerHolderComponent.getPowers(player, MobNeutralityPower.class)) {
+			for (MobNeutralityPower power : PowerHolderComponent.getPowerTypes(player, MobNeutralityPower.class)) {
 				if (power.shouldBeNeutral(entity) && power.isActive()) {
 					return true;
 				}

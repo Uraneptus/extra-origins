@@ -22,7 +22,7 @@ public abstract class ZoglinEntityMixin extends LivingEntity {
 	@ModifyReturnValue(method = "shouldAttack", at = @At("RETURN"))
 	private boolean extraorigins$mobNeutrality(boolean original, LivingEntity entity) {
 		if (original) {
-			for (MobNeutralityPower power : PowerHolderComponent.getPowers(entity, MobNeutralityPower.class)) {
+			for (MobNeutralityPower power : PowerHolderComponent.getPowerTypes(entity, MobNeutralityPower.class)) {
 				if (power.shouldBeNeutral(this) && power.isActive()) {
 					return false;
 				}

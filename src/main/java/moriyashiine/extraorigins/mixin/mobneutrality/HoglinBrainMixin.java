@@ -20,7 +20,7 @@ public class HoglinBrainMixin {
 	private static Optional<? extends LivingEntity> extraorigins$mobNeutrality(Optional<? extends LivingEntity> original, HoglinEntity hoglin) {
 		if (original.isPresent()) {
 			LivingEntity entity = original.get();
-			for (MobNeutralityPower power : PowerHolderComponent.getPowers(entity, MobNeutralityPower.class)) {
+			for (MobNeutralityPower power : PowerHolderComponent.getPowerTypes(entity, MobNeutralityPower.class)) {
 				if (power.shouldBeNeutral(hoglin) && power.isActive()) {
 					return Optional.empty();
 				}

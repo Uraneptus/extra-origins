@@ -23,7 +23,7 @@ public abstract class EndermanEntityMixin extends LivingEntity {
 	@ModifyReturnValue(method = "isPlayerStaring", at = @At("RETURN"))
 	private boolean extraorigins$mobNeutrality(boolean original, PlayerEntity player) {
 		if (original) {
-			for (MobNeutralityPower power : PowerHolderComponent.getPowers(player, MobNeutralityPower.class)) {
+			for (MobNeutralityPower power : PowerHolderComponent.getPowerTypes(player, MobNeutralityPower.class)) {
 				if (power.shouldBeNeutral(this) && power.isActive()) {
 					return false;
 				}
