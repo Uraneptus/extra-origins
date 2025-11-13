@@ -1,0 +1,19 @@
+{
+  "type": "origins:multiple",
+  "night_vision": {
+    "type": "origins:night_vision",
+    "strength": 1.0,
+    "condition": {
+      "type": "origins:all_of",
+      "conditions": [
+        {
+          "type": "origins:submerged_in",
+          "fluid": "minecraft:water"
+        }
+      ]
+    }
+  },
+  "no_delay": {
+    "type": "origins:water_vision"
+  }
+}

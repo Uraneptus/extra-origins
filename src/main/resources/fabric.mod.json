@@ -3,9 +3,10 @@
   "id": "extraorigins",
   "version": "${version}",
   "name": "Extra Origins",
-  "description": "Adds more origins to the Origins mod",
+  "description": "Badly ported Piglin Origin (slightly working). And custom Mermaid Origin",
   "authors": [
-	"MoriyaShiine"
+	"MoriyaShiine",
+    "Uraneptus"
   ],
   "contributors": [
 	"cybercat5555"

@@ -1,13 +1,17 @@
 {
   "powers": [
-	"extraorigins:all_that_glitters",
-	"extraorigins:crossbow_master",
-	"extraorigins:piglin_neutrality",
-	"origins:nether_spawn",
-	"extraorigins:homesick",
-	"extraorigins:golden_gluttony",
-	"extraorigins:flabby",
-	"extraorigins:soul_spooked"
+	  "extraorigins:all_that_glitters",
+	  "extraorigins:crossbow_master",
+	  "extraorigins:piglin_neutrality",
+	  "origins:nether_spawn",
+	  "extraorigins:homesick",
+	  "extraorigins:golden_gluttony",
+	  "extraorigins:flabby",
+	  "extraorigins:soul_spooked",
+	  "origins:fire_immunity",
+	  "origins:water_vulnerability",
+	  "origins:damage_from_snowballs",
+	  "origins:damage_from_potions"
   ],
   "icon": {
 	"id": "minecraft:golden_sword"

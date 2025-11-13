@@ -1,6 +1,7 @@
 {
   "replace": false,
   "origins": [
-	"extraorigins:piglin"
+	"extraorigins:piglin",
+    "extraorigins:mermaid"
   ]
 }

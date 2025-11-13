@@ -1,3 +1,6 @@
+/*
+ * Copyright (c) MoriyaShiine. All Rights Reserved.
+ */
 package moriyashiine.extraorigins.common.conditions;
 
 import io.github.apace100.apoli.condition.ConditionConfiguration;

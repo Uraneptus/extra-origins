@@ -1,0 +1,14 @@
+{
+  "type": "origins:launch",
+  "cooldown": 0,
+  "sound": "minecraft:entity.dolphin.jump",
+  "speed": 3,
+  "key": {
+    "key": "key.origins.secondary_active",
+    "continuous": true
+  },
+  "condition": {
+    "type": "origins:submerged_in",
+    "fluid": "minecraft:water"
+  }
+}

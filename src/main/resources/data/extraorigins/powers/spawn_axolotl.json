@@ -1,0 +1,24 @@
+{
+  "type": "origins:active_self",
+  "cooldown": 1200,
+  "hud_render": {
+    "sprite_location": "extraorigins:textures/gui/resource_bar.png",
+    "bar_index": 1
+  },
+  "entity_action": {
+    "type": "origins:spawn_entity",
+    "entity_type": "minecraft:axolotl",
+    "tag": "{Variant:3,FromBucket:1}"
+  },
+  "key": {
+    "key": "key.origins.primary_active",
+    "continuous": false
+  },
+  "condition": {
+    "type": "origins:fluid_height",
+    "fluid": "minecraft:water",
+    "comparison": ">=",
+    "compare_to": 0.5
+  }
+
+}
