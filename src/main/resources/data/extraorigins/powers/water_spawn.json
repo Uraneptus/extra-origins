@@ -1,0 +1,6 @@
+{
+  "type": "origins:modify_player_spawn",
+  "dimension": "overworld",
+  "biome_tag": "extraorigins:near_water",
+  "hidden": true
+}

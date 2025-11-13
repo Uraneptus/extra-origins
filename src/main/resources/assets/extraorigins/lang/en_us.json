@@ -53,5 +53,13 @@
   "power.extraorigins.soul_spooked.description": "You are afraid of soul fire, becoming weak when near it.",
   "power.extraorigins.radioactive.name": "Radioactive",
   "power.extraorigins.radioactive.description": "You have 3 random powers, each of which will decay into a new power after a certain amount of time.",
-  "origins.gui.impact.very_high": "Very High"
+  "origins.gui.impact.very_high": "Very High",
+  "origin.extraorigins.mermaid.name": "Mermaid",
+  "origin.extraorigins.mermaid.description": "Fish People",
+  "power.extraorigins.better_water_vision.name": "Wet Eyes",
+  "power.extraorigins.better_water_vision.description": "Your vision underwater is perfect.",
+  "power.extraorigins.mermaid_jump.name": "Mermaid Jump",
+  "power.extraorigins.mermaid_jump.description": "You can launch yourself in the air when fully submerged in water",
+  "power.extraorigins.spawn_axolotl.name": "Axolotl Friend",
+  "power.extraorigins.spawn_axolotl.description": "When in Water you can call for your axolotl friends"
 }

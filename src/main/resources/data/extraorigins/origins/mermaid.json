@@ -7,8 +7,9 @@
       "origins:like_water",
       "origins:aquatic",
       "origins:conduit_power_on_land",
-      "origins:air_from_potions",
+      "extraorigins:better_potion_air",
       "extraorigins:spawn_axolotl",
+      "extraorigins:water_spawn",
       "extraorigins:mermaid_jump"
     ],
     "icon": {
